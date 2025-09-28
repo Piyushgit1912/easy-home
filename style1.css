@@ -1,0 +1,175 @@
+/* ======================================================= */
+/* GLOBAL & BODY STYLES (Kept from previous steps) */
+/* ======================================================= */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    /* Background Image Settings */
+    background-image: url('Ghar-Dekho-1.png'); 
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;   
+    background-attachment: fixed;   
+    
+    color: #fff;
+    text-align: center;
+}
+
+/* Optional: Blue Overlay for Readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark blue with 30% opacity */
+    background-color: rgba(52, 152, 219, 0.3); 
+    z-index: -1; 
+}
+
+/* ======================================================= */
+/* GLASSMORHPISM CONTAINER STYLES (Kept from previous steps) */
+/* ======================================================= */
+.container {
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px);       
+    -webkit-backdrop-filter: blur(10px); 
+    
+    padding: 50px 70px; 
+    border-radius: 20px; 
+    
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
+    
+    max-width: 450px; 
+    width: 90%;
+    color: #fff; 
+}
+
+/* ======================================================= */
+/* TYPOGRAPHY & ICON STYLES (Kept from previous steps) */
+/* ======================================================= */
+.house-logo {
+    font-size: 80px; 
+    margin-bottom: 10px; 
+    color: #f1c40f; 
+    text-shadow: 0 0 15px rgba(241, 196, 15, 0.5); 
+}
+
+h1 {
+    font-size: 3em; 
+    margin-bottom: 5px;
+    letter-spacing: 2px; 
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px; 
+    opacity: 0.9;
+    font-style: italic; 
+}
+
+/* ======================================================= */
+/* BUTTON LAYOUT (Kept from previous steps) */
+/* ======================================================= */
+.auth-buttons {
+    position: relative; 
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    padding-bottom: 40px; 
+}
+
+.button {
+    display: block; 
+    padding: 15px 25px; /* MAINTAINING DIMENTIONS */
+    border-radius: 8px; /* Slightly softer corners for Neumorphism */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff; 
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    /* Smooth transition for all effects */
+    transition: all 0.3s ease;
+}
+
+/* ======================================================= */
+/* AESTHETIC & ELEGANT BUTTON STYLES (NEW) */
+/* ======================================================= */
+
+/* --- LOGIN BUTTON (Using a subtle gradient/soft style) --- */
+.login-btn {
+    /* Subtle Green/Blue Gradient */
+    background: linear-gradient(145deg, #2ecc71, #27ae60);
+    border: none; 
+    color: #fff;
+    /* Soft Neumorphic-like shadow */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4), 
+                -6px -6px 12px rgba(255, 255, 255, 0.1);
+}
+
+.login-btn:hover {
+    /* Slightly deeper color and subtle press effect */
+    background: linear-gradient(145deg, #27ae60, #2ecc71);
+    transform: scale(0.98); /* Subtle press-in effect */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5), 
+                -3px -3px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* --- SIGN UP BUTTON (Using a refined outline/glass style) --- */
+.signup-btn {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly more visible glass fill */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Thicker, defined glass border */
+    color: #fff;
+    /* Soft floating shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.signup-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Brighter glass on hover */
+    color: #fff; 
+    transform: scale(1.02); /* Slight lift */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
+}
+
+/* ======================================================= */
+/* SIMPLE HELP BUTTON (Bottom Right - Aesthetic Look) */
+/* ======================================================= */
+.help-btn-simple {
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+
+    /* MAINTAINING DIMENSIONS (padding) */
+    padding: 5px 10px; 
+    font-size: 0.8em;
+    width: auto; 
+
+    /* NEW Aesthetic look: minimal border, subtle background */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    color: rgba(255, 255, 255, 0.8); /* Faint white text */
+    border-radius: 4px;
+    
+    /* Ensure static state */
+    transform: none; 
+    box-shadow: none; 
+    transition: all 0.3s ease;
+}
+
+/* Ensure this simple button remains static */
+.help-btn-simple:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Very slight change */
+    color: #fff;
+    transform: none; 
+    box-shadow: none; 
+    cursor: pointer; /* Change to pointer to show it's clickable */
+}
